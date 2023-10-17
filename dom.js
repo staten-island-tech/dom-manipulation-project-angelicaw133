@@ -1,12 +1,14 @@
 const DOMSelectors = {
     form: document.querySelector("#form"),
-    object: document.querySelector(".object-test"),
-    h2s: document.querySelectorAll("h2"),
+    firstname: document.querySelector(".first_name"),
+    lastname: document.querySelector(".last_name"),
+
+
 }
 DOMSelectors.form.addEventListener("submit", function (event){
     event.preventDefault();
-    console.log(DOMSelectors.object.value);
+    console.log(DOMSelectors.firstname.value);
     DOMSelectors.h2s.forEach(
-        (el) => el.testContent = DOMSelectors.object.value
+        (el) => el.textContent = DOMSelectors.firstname.value
     );
 });
