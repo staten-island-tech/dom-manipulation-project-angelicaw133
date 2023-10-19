@@ -6,23 +6,15 @@ const DOMSelectors = {
     firstnameoutput: document.querySelector("#firstnameoutput"),
     lastnameoutput: document.querySelector("#lastnameoutput"),
     osisoutput: document.querySelector("#osisoutput"),
-}
+};
 
-console.log(DOMSelectors.firstname);
+
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     const firstname = DOMSelectors.firstname.value
-    DOMSelectors.firstnameoutput.innertext = firstname
-});
-console.log(DOMSelectors.lastname);
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
     const lastname = DOMSelectors.lastname.value
-    DOMSelectors.lastnameoutput.innertext = lastname
-});
-console.log(DOMSelectors.osis);
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
     const osis = DOMSelectors.osis.value
+    DOMSelectors.firstnameoutput.innertext = firstname
+    DOMSelectors.lastnameoutput.innertext = lastname
     DOMSelectors.osisoutput.innertext = osis
 });
