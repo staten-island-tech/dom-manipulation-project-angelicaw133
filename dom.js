@@ -11,10 +11,12 @@ const DOMSelectors = {
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    const firstname = DOMSelectors.firstname.value
+
+    const firstname= DOMSelectors.firstname.value
     const lastname = DOMSelectors.lastname.value
     const osis = DOMSelectors.osis.value
-    DOMSelectors.firstnameoutput.innertext = firstname
-    DOMSelectors.lastnameoutput.innertext = lastname
-    DOMSelectors.osisoutput.innertext = osis
+    DOMSelectors.firstnameoutput.innerText = firstname
+    DOMSelectors.lastnameoutput.innerText = lastname
+    DOMSelectors.osisoutput.innerText = osis
+
 });
