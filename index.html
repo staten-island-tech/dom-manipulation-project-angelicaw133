@@ -2,25 +2,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
     <title>Document</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" id="form">
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" class="first_name">
-        <label for="lastname">Last Name</label>
-        <input type="text" name="lastname" class="last_name">
-        <label for="osis">OSIS Number</label>
-        <input type="text" name="osis" class="osis_number">
+    <form action="" id = "form">
+        <label for="song">Song</label>
+        <input type="text" name="song" class="song_name">
+        <label for="artist">Artist</label>
+        <input type="text" name="artist" class="artist_name">        
+        <label for="album">Album Link</label>
+        <input type="text" name="album" class="album_link">
         <input type="submit" value="Click Here">
-    <form>
     <div id="output">
-        <h2 id="firstnameoutout"></h2>
-        <h2></h2>
-        <h2></h2>
+        <p id="songoutput"></p>
+        <p id= artistoutput></p>
+        <p id="albumoutput"></p>
     </div>
-
-    <script src = "dom.js" ></script>
+    </form>
+    <script src = trial.js ></script>
 </body>
 </html>
