@@ -1,22 +1,20 @@
 const DOMSelectors = {
     form: document.querySelector("#form"),
-    firstname: document.querySelector(".first_name"),
-    lastname: document.querySelector(".last_name"),
-    osis: document.querySelector(".osis_number"),
-    firstnameoutput: document.querySelector("#firstnameoutput"),
-    lastnameoutput: document.querySelector("#lastnameoutput"),
-    osisoutput: document.querySelector("#osisoutput"),
+    song: document.querySelector(".song_name"),
+    artist: document.querySelector(".artist_name"),
+    album: document.querySelector(".album_link"),
+    songoutput: document.querySelector("#songoutput"),
+    artistoutput: document.querySelector("#artistoutput"),
+    albumoutput: document.querySelector("#albumoutput"),
 };
-
 
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
 
-    const firstname= DOMSelectors.firstname.value
-    const lastname = DOMSelectors.lastname.value
-    const osis = DOMSelectors.osis.value
-    DOMSelectors.firstnameoutput.innerText = firstname
-    DOMSelectors.lastnameoutput.innerText = lastname
-    DOMSelectors.osisoutput.innerText = osis
-
+    const song_name = DOMSelectors.song.value
+    DOMSelectors.songoutput.innerText = song_name
+    const artist_name = DOMSelectors.artist.value
+    DOMSelectors.artistoutput.innerText = artist_name
+    const album = DOMSelectors.album.value
+    DOMSelectors.songoutput.innerHTML = '<img src="${album}"/>'
 });
