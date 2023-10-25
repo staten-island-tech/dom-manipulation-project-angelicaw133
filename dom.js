@@ -6,15 +6,20 @@ const DOMSelectors = {
     songoutput: document.querySelector("#songoutput"),
     artistoutput: document.querySelector("#artistoutput"),
     albumoutput: document.querySelector("#albumoutput"),
+    div: document.querySelector('.output')
 };
 
+function create(){
+     return `
+        <p>${DOMSelectors.song.value}</p>
+        <p>${DOMSelectors.artist.value}</p>    
+        <p>${DOMSelectors.album.value}</p>   
+        `
+    };
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-
-    const song_name = DOMSelectors.song.value
-    DOMSelectors.songoutput.innerText = song_name
-    const artist_name = DOMSelectors.artist.value
-    DOMSelectors.artistoutput.innerText = artist_name
-    const album = DOMSelectors.album.value
-    DOMSelectors.songoutput.innerHTML = '<img src="${album}"/>'
+    DOMSelectors.div.insertAdjacentHTML(
+        "afterbegin", create()
+    )
 });
+
