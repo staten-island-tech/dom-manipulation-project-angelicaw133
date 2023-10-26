@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <form action="" id = "form">
+    <form action="" id = "form" class="form_class">
         <label for="song">Song</label>
         <input type="text" name="song" class="song_name">
         <label for="artist">Artist</label>
@@ -18,11 +18,24 @@
         <!-- <p id="songoutput"></p>
         <p id= artistoutput></p>
         <p id="albumoutput"></p> -->
-    <div class="card"></div>
-        <h2>Song</h2>
-        <h3>artist</h3>
-        <img src="https://play-lh.googleusercontent.com/QovZ-E3Uxm4EvjacN-Cv1LnjEv-x5SqFFB5BbhGIwXI_KorjFhEHahRZcXFC6P40Xg" alt="">
-        <input type="submit"value="Remove Song">
+        <article class="cta">
+            <img src='https://images.unsplash.com/photo-1600078686889-8c42747c25fe?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzMjg5Nw&ixlib=rb-1.2.1&q=80&w=400' alt='Bluetit'>
+            <div class="cta__text-column">
+                <h2>Aspect ratio is great</h2>
+                <p>This image has an aspect ratio of 3/2.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">Read all about it</a>
+            </div>
+        </article>
+        
+        <article class="cta">
+            <img src='https://images.unsplash.com/photo-1569762825621-2dab96140a1d?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=MnwxNDU4OXwwfDF8cmFuZG9tfHx8fHx8fHx8MTY0NDMzNDkxMQ&ixlib=rb-1.2.1&q=80&w=400' alt='Small blue-grey yellow-breasted bird'>
+            <div class="cta__text-column">
+                <h2>Aspect ratio is great</h2>
+                <p>This image has an aspect ratio of 3/2. But when the text is longer, the image grows too, overriding its aspect ratio. Cool!</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio">Read all about it</a>
+            </div>
+        </article>
 
     </div>
     </form>
