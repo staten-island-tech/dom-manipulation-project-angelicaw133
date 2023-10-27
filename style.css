@@ -1,5 +1,5 @@
 body {
-    background-color: #d1edf2;
+    background-color: #5ac1d3;
     text-align: center;
     box-sizing: border-box;
     margin: 0;
@@ -44,36 +44,37 @@ h2 {
 	}
 }
 
-.cta {
+.card {
 	--shadowColor: 187 60% 40%;
 	display: flex;
 	flex-wrap: wrap;
 	background: hsl(187 70% 85%);
 	max-width: 50rem;
 	width: 100%;
-	box-shadow: 0.65rem 0.65rem 0 hsl(var(--shadowColor) / 1);
 	border-radius: 0.8rem;
 	overflow: hidden;
 	border: 0.5rem solid;
+	margin: 20px;
 }
 
-.cta img {
+.card img {
 	aspect-ratio: 3 / 2;
 	object-fit: cover;
 	flex: 1 1 300px;
 	outline: 0.5rem solid;
 }
 
-.cta__text-column {
+.card_text {
 	padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
 	flex: 1 0 50%;
+	
 }
 
-.cta__text-column > * + * {
+.card_text > * + * {
 	margin: min(1.5rem, 2.5vw) 0 0 0;
 }
 
-.cta a {
+.card a {
 	display: inline-block;
 	color: black;
 	padding: 0.5rem 1rem;

@@ -6,7 +6,7 @@ const DOMSelectors = {
     songoutput: document.querySelector("#songoutput"),
     artistoutput: document.querySelector("#artistoutput"),
     albumoutput: document.querySelector("#albumoutput"),
-    div: document.querySelector('.output')
+    container: document.querySelector(".container"),
 };
 
 function create(){
@@ -18,8 +18,18 @@ function create(){
     };
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    DOMSelectors.div.insertAdjacentHTML(
-        "afterbegin", create()
-    )
+    // DOMSelectors.container.insertAdjacentHTML(
+    //     "afterbegin", '<div class="card"><img src='' alt=''><div class="card text"><h2>${}</h2><h3></h3></div></div>',
+    //     create()
+    // )
+    console.log(create.);
 });
 
+// function remove(){
+//     let btns = document.querySelectorAll("button"
+//     );
+//     btns.forEach((button)= button.addEventListener('click', function(event){
+//         console.log(event.target.parentElement);
+//     }));
+// }
+// remove()
