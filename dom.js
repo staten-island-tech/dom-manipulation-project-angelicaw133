@@ -6,25 +6,31 @@ const DOMSelectors = {
     songoutput: document.querySelector("#songoutput"),
     artistoutput: document.querySelector("#artistoutput"),
     albumoutput: document.querySelector("#albumoutput"),
-    container: document.querySelector(".container"),
 };
 
+// function create(){
+//      return `
+//         <p>${DOMSelectors.song.value}</p>
+//         <p>${DOMSelectors.artist.value}</p>    
+//         <p>${DOMSelectors.album.value}</p>   
+//         `
+//     };
 function create(){
-     return `
-        <p>${DOMSelectors.song.value}</p>
-        <p>${DOMSelectors.artist.value}</p>    
-        <p>${DOMSelectors.album.value}</p>   
-        `
-    };
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
-    // DOMSelectors.container.insertAdjacentHTML(
-    //     "afterbegin", '<div class="card"><img src='' alt=''><div class="card text"><h2>${}</h2><h3></h3></div></div>',
-    //     create()
-    // )
-    console.log(create.);
+    const song = DOMSelectors.song.value 
+    const artist = DOMSelectors.artist.value
+    const album = DOMSelectors.album.value
+    
+    document
+    .querySelector(".container")
+    .insertAdjacentHTML(
+        "afterbegin",
+         '<div class="card"> <div class="card text"> <h2>${}</h2> <h3></h3> </div> <img src="" alt="" /> </div> '
+    );
 });
-
+}
+create()
 // function remove(){
 //     let btns = document.querySelectorAll("button"
 //     );
