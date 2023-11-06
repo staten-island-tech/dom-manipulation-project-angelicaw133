@@ -4,9 +4,7 @@ const DOMSelectors = {
     artist: document.querySelector(".artist_name"),
     album: document.querySelector(".album_link"),
     container: document.querySelector("#container"),
- 
 };
-
 
 // function create(){
 //      return `
@@ -16,17 +14,17 @@ const DOMSelectors = {
 //         `
 //     };
   function create(song, artist, album){
-    DOMSelectors.container.insertAdjacentHTML("afterbegin",
-    '${song}'
-   );
-}
+    DOMSelectors.container
+    .insertAdjacentHTML("afterbegin",
+    `<div class="card"> <div class="card text"> <h2>${song}</h2> <h3>${artist}</h3> </div> <img src="${album}" alt="}" /> </div> `
+   )};
 function submit_form(){
 DOMSelectors.form.addEventListener("submit", function(event){
     event.preventDefault();
     const song = DOMSelectors.song.value
     const artist = DOMSelectors.artist.value 
     const album = DOMSelectors.album.value
-
+    create(song, artist, album)
 
 });  
 }
@@ -40,14 +38,14 @@ DOMSelectors.form.addEventListener("submit", function(event){
         DOMSelectors.album.value = "";
     }
     clear()
-})
+});
 
 
-function remove(){
-    let btns = document.querySelectorAll("button"
-    );
-    btns.forEach((button)= button.addEventListener('click', function(event){
-        console.log(event.target.parentElement);
-    }));
-}
-remove()
+// function remove(){
+//     let btns = document.querySelectorAll("button"
+//     );
+//     btns.forEach((button)= button.addEventListener('click', function(event){
+//         console.log(event.target.parentElement);
+//     }));
+// }
+// remove()
