@@ -16,7 +16,7 @@ const DOMSelectors = {
   function create(song, artist, album){
     DOMSelectors.container
     .insertAdjacentHTML("afterbegin",
-    `<div class="card"> <div class="card text"> <h2>${song}</h2> <h3>${artist}</h3> </div> <img src="${album}" alt="}" /> </div> `
+    `<div class="card"> <div class="card text"> <h2>${song}</h2> <h3>${artist}</h3> </div> <img src="${album}" alt="}" /> </div>`
    )};
 function submit_form(){
 DOMSelectors.form.addEventListener("submit", function(event){
@@ -25,8 +25,7 @@ DOMSelectors.form.addEventListener("submit", function(event){
     const artist = DOMSelectors.artist.value 
     const album = DOMSelectors.album.value
     create(song, artist, album)
-
-});  
+});
 }
 create();
 submit_form();
