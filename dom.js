@@ -1,50 +1,46 @@
 const DOMSelectors = {
-    form: document.querySelector("#form"),
-    song: document.querySelector(".song_name"),
-    artist: document.querySelector(".artist_name"),
-    album: document.querySelector(".album_link"),
-    container: document.querySelector("#container"),
+  form: document.querySelector("#form"),
+  song: document.querySelector(".song_name"),
+  artist: document.querySelector(".artist_name"),
+  album: document.querySelector(".album_link"),
+  button: document.querySelector(".button"),
+  container: document.querySelector("#container"),
+  deletebtn: document.querySelector(".deletebtn"),
 };
 
-// function create(){
-//      return `
-//         <p>${DOMSelectors.song.value}</p>
-//         <p>${DOMSelectors.artist.value}</p>    
-//         <p>${DOMSelectors.album.value}</p>   
-//         `
-//     };
-  function create(song, artist, album){
-    DOMSelectors.container
-    .insertAdjacentHTML("afterbegin",
-    `<div class="card"> <div class="card text"> <h2>${song}</h2> <h3>${artist}</h3> </div> <img src="${album}" alt="}" /> </div>`
-   )};
-function submit_form(){
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
-    const song = DOMSelectors.song.value
-    const artist = DOMSelectors.artist.value 
-    const album = DOMSelectors.album.value
-    create(song, artist, album)
+DOMSelectors.button.addEventListener("click", function (event) {
+  event.preventDefault();
+  createhtml();
 });
+
+function createhtml() {
+  const submittedvariables = {
+    song: DOMSelectors.song.value,
+    artist: DOMSelectors.artist.value,
+    album: DOMSelectors.album.value,
+  };
+  insert(submittedvariables);
 }
-create();
-submit_form();
-DOMSelectors.form.addEventListener("submit", function(event){
-    event.preventDefault();
-    function clear() {
-        DOMSelectors.song.value = "";
-        DOMSelectors.artist.value = "";
-        DOMSelectors.album.value = "";
-    }
-    clear()
-});
 
+function insert(submitted) {
+  DOMSelectors.container.insertAdjacentHTML("afterend",
+    `<div class="card"> 
+    <div class="card text"> 
+    <h2>${submitted.song}</h2> <h3>${submitted.artist}</h3> </div> <img src="${submitted.album}" alt="}"/> 
+    <button type="button" class="deletebtn">delete!</button>
+    </div>`
+  );
+  clear(DOMSelectors)
+  deletebtn()
+}
 
-// function remove(){
-//     let btns = document.querySelectorAll("button"
-//     );
-//     btns.forEach((button)= button.addEventListener('click', function(event){
-//         console.log(event.target.parentElement);
-//     }));
-// }
-// remove()
+function clear(DOMSelectors) {
+  DOMSelectors.song.value = DOMSelectors.artist.value = DOMSelectors.album.value = "";
+}
+
+function remove() {
+  deletbtn.addEventListener('click', function (event) {
+    event.target.parentElement.remove()
+  })
+}
+
