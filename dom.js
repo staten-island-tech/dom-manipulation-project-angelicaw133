@@ -24,24 +24,23 @@ function createhtml() {
 
 function insert(DOMSelectors,submitted) {
   DOMSelectors.container.insertAdjacentHTML("afterend",
-    `<div class="card"> 
+    ` <div class="card"> 
     <div class="card text"> 
     <h2>${submitted.song}</h2> <h3>${submitted.artist}</h3> </div> <img src="${submitted.album}" alt="}"/> 
     <button type="button" class="deletebtn">delete!</button>
-    </div>`
+    </div> `
   );
   clear(DOMSelectors)
   deletebuttons()
-}
 
 function clear(DOMSelectors) {
   DOMSelectors.song.value = DOMSelectors.artist.value = DOMSelectors.album.value = "";
 }
 
 function deletebuttons() {
-  let deletebtn = document.querySelector(".deletbtn")
-  deletbtn.addEventListener('click', function (event) {
+  const deletebtn = document.querySelector(".deletebtn")
+  deletebtn.addEventListener('click', function (event) {
     event.target.parentElement.remove()
   })
 }
-
+}
