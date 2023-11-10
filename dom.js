@@ -4,8 +4,7 @@ const DOMSelectors = {
   artist: document.querySelector(".artist_name"),
   album: document.querySelector(".album_link"),
   button: document.querySelector(".button"),
-  container: document.querySelector("#container"),
-  deletebtn: document.querySelector(".deletebtn"),
+  container: document.querySelector(".container"),
 };
 
 DOMSelectors.button.addEventListener("click", function (event) {
@@ -18,11 +17,12 @@ function createhtml() {
     song: DOMSelectors.song.value,
     artist: DOMSelectors.artist.value,
     album: DOMSelectors.album.value,
+    
   };
-  insert(submittedvariables);
+  insert(DOMSelectors,submittedvariables);
 }
 
-function insert(submitted) {
+function insert(DOMSelectors,submitted) {
   DOMSelectors.container.insertAdjacentHTML("afterend",
     `<div class="card"> 
     <div class="card text"> 
@@ -31,14 +31,15 @@ function insert(submitted) {
     </div>`
   );
   clear(DOMSelectors)
-  deletebtn()
+  deletebuttons()
 }
 
 function clear(DOMSelectors) {
   DOMSelectors.song.value = DOMSelectors.artist.value = DOMSelectors.album.value = "";
 }
 
-function remove() {
+function deletebuttons() {
+  let deletebtn = document.querySelector(".deletbtn")
   deletbtn.addEventListener('click', function (event) {
     event.target.parentElement.remove()
   })
