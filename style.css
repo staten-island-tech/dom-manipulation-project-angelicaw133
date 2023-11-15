@@ -1,86 +1,57 @@
 body {
-    background-color: #5ac1d3;
-    text-align: center;
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-.container {
-   display: flex;
-   flex-wrap: wrap;
-}
-
-.form_class{
-    font-size: 20px;
-}
-* {
-	box-sizing: border-box;
-}
-
-body {
-	font-family: "Open Sans", sans-serif;
-	min-height: 20vh;
-	display: flex;
-	flex-direction: column;
-	gap: 2rem;
-	justify-content: center;
-	align-items: center;
-	background: hsl(187 40% 98%);
-}
-
-img {
-	display: block;
-    object-fit: contain;
-}
-
-h2 {
-	margin: 0;
-	font-size: 1.4rem;
-}
-
-@media (min-width: 50em) {
-	h2 {
-		font-size: 1.8rem;
-	}
-}
-
-.card {
-	--shadowColor: 187 60% 40%;
-	display: flex;
-	flex-wrap: wrap;
-	background: hsl(187 70% 85%);
-	max-width: 50rem;
+	font-size: 62.5%;
+	   box-sizing: border-box;
+	   margin: 0;
+	   padding: 0;
+	   font-family: 'Frank Ruhl Libre', serif;
+   font-family: 'Kaushan Script', cursive;
+   }
+   .container {
+	 background-color: #a2abb5 ;
+	height: 50vh
+   }
+   
+   
+   .form_class{
+	   font-size: 20px;
+   }
+   * {
+	   box-sizing: border-box;
+   }
+   
+   body {
+	   font-family: "Open Sans", sans-serif;
+	   min-height: 20vh;
+	   display: flex;
+	   flex-direction: column;
+	   gap: 2rem;
+	   justify-content: center;
+	   align-items: center;
+	   background-color: #3658;
+   }
+   
+   img {
 	width: 100%;
-	border-radius: 0.8rem;
-	overflow: hidden;
-	border: 0.5rem solid;
-	margin: 20px;
-}
-
-.card img {
-	aspect-ratio: 3 / 2;
-	object-fit: cover;
-	flex: 1 1 300px;
-	outline: 0.5rem solid;
-}
-
-.card_text {
-	padding: min(2rem, 5vw) min(2rem, 5vw) min(2.5rem, 5vw);
-	flex: 1 0 50%;
-	
-}
-
-.card_text > * + * {
-	margin: min(1.5rem, 2.5vw) 0 0 0;
-}
-
-.card a {
-	display: inline-block;
-	color: black;
-	padding: 0.5rem 1rem;
-	text-decoration: none;
-	background: hsl(187 75% 64%);
-	border-radius: 0.6rem;
-	font-weight: 700;
-	border: 0.35rem solid;
-}
+   }
+   
+   h2 {
+	   margin: 0;
+	   font-size: 1.4rem;
+   }
+   
+   @media (min-width: 50em) {
+	   h2 {
+		   font-size: 1.8rem;
+	   }
+   }
+   
+   .card {
+	   display: flex;
+	   flex-wrap: wrap;
+	   background: #569;
+	   max-width: 50rem;
+	   width: 100%;
+	   border-radius: 0.8rem;
+	   border: 0.5rem solid;
+	   margin: 20px;
+   }

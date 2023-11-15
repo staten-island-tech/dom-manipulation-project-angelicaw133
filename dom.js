@@ -24,9 +24,8 @@ function createhtml() {
 
 function insert(DOMSelectors,submitted) {
   DOMSelectors.container.insertAdjacentHTML("afterend",
-    ` <div class="card"> 
-    <div class="card text"> 
-    <h2>${submitted.song}</h2> <h3>${submitted.artist}</h3> </div> <img src="${submitted.album}" alt="}"/> 
+    `<div class="card"> 
+    <h2>${submitted.song}</h2> <img src="${submitted.album}" alt="}"/>  <h3>${submitted.artist}</h3> 
     <button type="button" class="deletebtn">delete!</button>
     </div> `
   );
