@@ -6,11 +6,6 @@ body {
 	   font-family: 'Frank Ruhl Libre', serif;
    font-family: 'Kaushan Script', cursive;
    }
-   .container {
-	 background-color: #a2abb5 ;
-	height: 50vh
-   }
-   
    
    .form_class{
 	   font-size: 20px;
@@ -23,7 +18,7 @@ body {
 	   font-family: "Open Sans", sans-serif;
 	   min-height: 20vh;
 	   display: flex;
-	   flex-direction: column;
+	   flex-direction: row;
 	   gap: 2rem;
 	   justify-content: center;
 	   align-items: center;
