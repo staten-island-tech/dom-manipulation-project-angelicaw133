@@ -23,7 +23,7 @@ function createhtml() {
 }
 
 function insert(DOMSelectors,submitted) {
-  DOMSelectors.container.insertAdjacentHTML("afterend",
+  DOMSelectors.container.insertAdjacentHTML("afterbegin",
     `<div class="card"> 
     <h2>${submitted.song}</h2> <img src="${submitted.album}" alt="}"/>  <h3>${submitted.artist}</h3> 
     <button type="button" class="deletebtn">delete!</button>
@@ -33,7 +33,9 @@ function insert(DOMSelectors,submitted) {
   deletebuttons()
 
 function clear(DOMSelectors) {
-  DOMSelectors.song.value = DOMSelectors.artist.value = DOMSelectors.album.value = "";
+  DOMSelectors.song.value = "";
+  DOMSelectors.artist.value = "";
+  DOMSelectors.album.value = "";
 }
 
 function deletebuttons() {
